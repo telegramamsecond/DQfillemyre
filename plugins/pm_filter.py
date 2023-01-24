@@ -532,17 +532,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         chat_id=query.from_user.id,
                         file_id=file_id,
                         caption=f_caption,
-                        protect_content=True if ident == "filep" else False,
-                        reply_markup=InlineKeyboardMarkup(
-                            [
-                             [
-                              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                           ],[
-                              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorbeatz")
-                             ]
-                            ]
-                        )
+                        protect_content=True if ident == "filep" else False
                     )
                 else:
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
@@ -580,17 +570,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                  InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                  InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-               ],[
-                  InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorbeatz")
-                 ]
-                ]
-            )
+            protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
         await query.answer()
@@ -873,16 +853,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('♚ Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
-                    InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK)
-                ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about'),
                     InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='')
                 ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    InlineKeyboardButton("ɢʀᴏᴜᴩ 1 🎪", url="https://t.me/+PBGW_EV3ldY5YjJl"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴩ 2 🎪", url="https://t.me/+eDjzTT2Ua6kwMTI1")                  
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
